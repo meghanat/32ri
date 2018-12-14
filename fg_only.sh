@@ -1,0 +1,188 @@
+
+bg_util=0.0
+bg_period=300
+
+
+
+
+
+declare -a pids
+
+echo bg_util is $bg_util
+
+echo `pwd`
+
+
+
+
+
+rm bg_resp.txt
+touch bg_resp.txt
+
+
+
+cd wl1
+
+gcc job.c -o emulate_job
+chmod +x emulate_job
+rm wl_resp.txt
+touch wl_resp.txt
+gcc controller.c -o controller
+
+cd ../wl2
+
+gcc job.c -o emulate_job
+chmod +x emulate_job
+rm wl_resp.txt
+touch wl_resp.txt
+gcc controller.c -o controller
+
+
+cd ../wl3
+
+gcc job.c -o emulate_job
+chmod +x emulate_job
+rm wl_resp.txt
+touch wl_resp.txt
+gcc controller.c -o controller
+
+cd ../wl4
+
+gcc job.c -o emulate_job
+chmod +x emulate_job
+rm wl_resp.txt
+touch wl_resp.txt
+gcc controller.c -o controller	
+
+cd ../wl5
+
+gcc job.c -o emulate_job
+chmod +x emulate_job
+rm wl_resp.txt
+touch wl_resp.txt
+gcc controller.c -o controller
+
+cd ../wl6
+
+gcc job.c -o emulate_job
+chmod +x emulate_job
+rm wl_resp.txt
+touch wl_resp.txt
+gcc controller.c -o controller
+
+cd ../wl7
+
+gcc job.c -o emulate_job
+chmod +x emulate_job
+rm wl_resp.txt
+touch wl_resp.txt
+gcc controller.c -o controller
+
+cd ../wl8
+
+gcc job.c -o emulate_job
+chmod +x emulate_job
+rm wl_resp.txt
+touch wl_resp.txt
+gcc controller.c -o controller
+
+
+
+cd ../wl1
+sudo ./controller 0 1 1 &
+pids[0]=$!
+
+cd ../wl2
+sudo ./controller 0 1 1 &
+pids[1]=$!
+
+cd ../wl3
+sudo ./controller 0 1 1 &
+pids[2]=$!
+
+cd ../wl4
+sudo ./controller 0 1 1 &
+pids[3]=$!
+
+cd ../wl5
+sudo ./controller 0 1 1 &
+pids[4]=$!
+
+cd ../wl6
+sudo ./controller 0 1 1 &
+pids[5]=$!
+
+cd ../wl7
+sudo ./controller 0 1 1 &
+pids[6]=$!
+
+cd ../wl8
+sudo ./controller 0 1 1 &
+pids[7]=$!
+
+
+for pid in ${pids[*]}; do
+	echo $pid
+	wait $pid
+done
+
+
+sudo killall controller
+sudo killall emulate_job
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_jobs
+sudo killall loader
+sudo killall bg_job
+echo `pwd`
+
+
+cd wl1
+mv wl_resp.txt fg_only/fg.csv
+
+cd ../wl2
+mv wl_resp.txt fg_only/fg.csv
+
+cd ../wl3
+mv wl_resp.txt fg_only/fg.csv
+
+cd ../wl4
+mv wl_resp.txt fg_only/fg.csv
+
+cd ../wl5
+mv wl_resp.txt fg_only/fg.csv
+
+cd ../wl6
+mv wl_resp.txt fg_only/fg.csv
+
+cd ../wl7
+mv wl_resp.txt fg_only/fg.csv
+
+cd ../wl8
+mv wl_resp.txt fg_only/fg.csv
+
+cd ..
+
+echo change to main 
+echo `pwd`
+
+
+
+
+
+
+
+

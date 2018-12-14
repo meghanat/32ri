@@ -1,0 +1,56 @@
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+
+
+sudo killall loader
+sudo killall bg_job
+sudo killall controller
+sudo killall emulate_job
+
+sudo killall dead_loader
+sudo killall dead_bg_job
+sudo killall dead_controller
+sudo killall dead_emulate_job
+
+sudo killall dead_loader
+sudo killall dead_bg_job
+sudo killall dead_controller
+sudo killall dead_emulate_job
+sudo killall dead_loader
+sudo killall dead_bg_job
+sudo killall dead_controller
+sudo killall dead_emulate_job
+sudo killall dead_loader
+sudo killall dead_bg_job
+sudo killall dead_controller
+sudo killall dead_emulate_job
+sudo killall dead_loader
+sudo killall dead_bg_job
+sudo killall dead_controller
+sudo killall dead_emulate_job
